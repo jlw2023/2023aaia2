@@ -1,9 +1,7 @@
 class Solution:
-    def hasCycle(self, head: Optional[ListNode]) -> bool:
-        fast, slow = head, head
+    def repeatedSubstringPattern(self, s: str) -> bool:
+        s2=s+s
+        s2=s2[1:len(s2)-1]
 
-        while fast!=None and fast.next!=None:
-            fast = fast.next.next
-            slow = slow.next
-            if fast==slow: return True
-        return False
+        if s in s2: return True
+        else: return False

@@ -1,11 +1,7 @@
-bool hasCycle(struct ListNode *head) {
-    struct ListNode *fast=head;
-    struct ListNode *slow=head;
-    while(fast !=NULL && fast->next!=NULL){
-        fast = fast->next->next;
-        slow = slow->next;
-        if(fast==slow) return true;
+class Solution {
+public:
+    int strStr(string haystack, string needle) {
+        //https://cplusplus.com/reference/string/string/find/#google_vignette
+        return haystack.find(needle);
     }
-    return false;
-
-}
+};
